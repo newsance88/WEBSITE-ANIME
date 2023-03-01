@@ -15,11 +15,33 @@ header {
   color: #fff;
   padding: 10px;
 }
-h1 {
-    font-size: 36px;
-    font-weight: bold;
-    margin: 0;
+.logo {
+position: relative;
+-webkit-box-reflect: below -20px liner-gradient(transparent, color blue);
 }
+.logo span {
+  font-family: 'Alfa Slab One', cursive;
+  position: relative;
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  animation: wavy 2s;
+  animation-delay: calc(.1s * var(--i));
+  animation-iteration-count: infinite;
+}
+@keyframes wavy {
+
+  0%,
+  40%,
+  100% {
+      transform: translateY(0)
+  }
+
+  20% {
+      transform: translateY(-20px)
+  }
+}
+
 ul {
     list-style: none;
 

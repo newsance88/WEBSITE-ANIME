@@ -2,8 +2,12 @@ Server.use(cors());
 
 
 async function getResponse ( ){
-  let response = await fetch ('newanimepage.html')
-  console.log(response)
+  let url = 'newanimepage.html';
+let response = await fetch(url);
+
+let commits = await response.json(); // читаем ответ в формате JSON
+
+alert(commits[0].author.login);
 }
 
 getResponse()
